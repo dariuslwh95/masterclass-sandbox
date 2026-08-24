@@ -597,7 +597,7 @@ nfd:
 # Toggle individual components via managementState: Managed | Removed.
 # ------------------------------------------------------------------------------
 rhods:
-  enabled: true
+  enabled: false
 
   # DSCInitialization
   #
@@ -716,7 +716,7 @@ rhods:
   #   observabilityDashboard— per-model metrics tab
   # ----------------------------------------------------------------------------
   dashboardConfig:
-    enabled: true
+    enabled: false
     name: odh-dashboard-config
     namespace: redhat-ods-applications
     spec:
@@ -797,7 +797,7 @@ cnv:
 # prefer capturing the whole default over hand-picking fields.
 # ------------------------------------------------------------------------------
 gpuOperator:
-  enabled: true
+  enabled: false
 
   clusterPolicy:
     enabled: true
@@ -917,7 +917,7 @@ gpuOperator:
 # regeneration one-liner.
 # ------------------------------------------------------------------------------
 workshopAuth:
-  enabled: false
+  enabled: true
   identityProviderName: workshop-htpasswd
   secretName: workshop-htpasswd
 
@@ -973,7 +973,7 @@ storageClasses:
     allowVolumeExpansion: true
 
 maas:
-  enabled: true
+  enabled: false
 
   # ----------------------------------------------------------------------------
   # Kuadrant CR — turns the rhcl-operator's CRDs into a running control plane
@@ -1003,7 +1003,7 @@ maas:
   # opendatahub.io/managed: "false".
   # ----------------------------------------------------------------------------
   gateway:
-    enabled: true
+    enabled: false
     name: maas-default-gateway
     namespace: openshift-ingress
     gatewayClassName: openshift-default
@@ -1030,7 +1030,7 @@ maas:
   # usage metrics that the "AI MaaS Admin & Analyst" dashboard reads.
   # ----------------------------------------------------------------------------
   tenant:
-    enabled: true
+    enabled: false
     name: default-tenant
     namespace: models-as-a-service
     spec:
@@ -1059,7 +1059,7 @@ maas:
   # overlay/my-sno-cluster/model-serving.
   # ----------------------------------------------------------------------------
   subscriptions:
-    enabled: true
+    enabled: false
     namespace: models-as-a-service
     defaultModelRefs:
       - name: llama-32-1b-instruct-maas
@@ -1112,7 +1112,7 @@ maas:
   # in the model namespace.
   # ----------------------------------------------------------------------------
   authPolicies:
-    enabled: true
+    enabled: false
     namespace: models-as-a-service
     # Generated from `subscriptions.items` (<name>-policy, same group and
     # modelRefs). Set to false and use `items` below to decouple them.
@@ -1131,7 +1131,7 @@ maas:
   # "<subscription>-tier". The /v1/models exclusion keeps model discovery free.
   # ----------------------------------------------------------------------------
   gatewayPolicies:
-    enabled: true
+    enabled: false
     namespace: openshift-ingress
     targetGateway: maas-default-gateway
 
@@ -1166,7 +1166,7 @@ maas:
     # traffic down by user, org or cost centre. `model` is read out of the
     # response body, which is why it needs the body-based routing path to work.
     telemetryPolicy:
-      enabled: true
+      enabled: false
       name: maas-telemetry
       labels:
         cost_center: auth.identity.subscription_info.costCenter
@@ -1202,7 +1202,7 @@ maas:
   # grafana namespace (see grafana.extraDatasources).
   # ----------------------------------------------------------------------------
   metricsDatabase:
-    enabled: true
+    enabled: false
     name: maas-postgres
     namespace: redhat-ods-applications
     # Built-in OpenShift postgresql imagestream — no registry auth needed.
@@ -1249,7 +1249,7 @@ maas:
   # there fails at TLS handshake, not at sync.
   # ----------------------------------------------------------------------------
   authorino:
-    enabled: true
+    enabled: false
     name: authorino
     namespace: kuadrant-system
     serviceName: authorino-authorino-authorization
@@ -1392,7 +1392,7 @@ clusterMonitoring:
   # techdebt entry.
   # ----------------------------------------------------------------------------
   rhoaiMonitoringWorkarounds:
-    enabled: true
+    enabled: false
     namespace: redhat-ods-monitoring
 
     # techdebt #3: the operator-generated

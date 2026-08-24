@@ -47,7 +47,7 @@ operators:
   # NVIDIA GPU Operator (Certified)
   # ----------------------------------------------------------------------------
   gpuOperator:
-    enabled: true
+    enabled: false
     namespace:
       create: true
       name: nvidia-gpu-operator
@@ -142,7 +142,7 @@ operators:
   # Kernel Module Management Hub (Red Hat)
   # ----------------------------------------------------------------------------
   kmmHub:
-    enabled: true
+    enabled: false
     namespace:
       create: true
       name: openshift-kmm-hub
@@ -190,7 +190,7 @@ operators:
   # Node Feature Discovery (Red Hat)
   # ----------------------------------------------------------------------------
   nfd:
-    enabled: true
+    enabled: false
     namespace:
       create: true
       name: openshift-nfd
@@ -262,7 +262,7 @@ operators:
   # Red Hat OpenShift AI / RHODS (Red Hat)
   # ----------------------------------------------------------------------------
   rhodsOperator:
-    enabled: true
+    enabled: false
     namespace:
       create: true
       name: redhat-ods-operator
@@ -377,7 +377,7 @@ operators:
   # a pinned startingCSV is used here so a fresh bootstrap completes unattended.
   # ----------------------------------------------------------------------------
   serviceMesh3:
-    enabled: true
+    enabled: false
     namespace:
       create: false   # openshift-operators is a built-in OCP namespace
       name: openshift-operators
@@ -409,7 +409,7 @@ operators:
   # NOTE: source cluster used installPlanApproval: Manual — see serviceMesh3.
   # ----------------------------------------------------------------------------
   connectivityLink:
-    enabled: true
+    enabled: false
     namespace:
       create: false   # openshift-operators is a built-in OCP namespace
       name: openshift-operators
@@ -433,7 +433,7 @@ operators:
   # metrics certs in openshift-kueue-operator).
   # ----------------------------------------------------------------------------
   kueueOperator:
-    enabled: true
+    enabled: false
     namespace:
       create: true
       name: openshift-kueue-operator
@@ -461,7 +461,7 @@ operators:
   # matching layer2 operand.
   # ----------------------------------------------------------------------------
   leaderWorkerSet:
-    enabled: true
+    enabled: false
     namespace:
       create: true
       name: openshift-lws-operator
@@ -490,7 +490,7 @@ operators:
   # the DSCI monitoring block never reconciles and no MaaS metrics are scraped.
   # ----------------------------------------------------------------------------
   openTelemetry:
-    enabled: true
+    enabled: false
     namespace:
       create: true
       name: openshift-opentelemetry-operator
@@ -517,7 +517,7 @@ operators:
   # TempoMonolithic ("data-science-tempomonolithic") in redhat-ods-monitoring.
   # ----------------------------------------------------------------------------
   tempo:
-    enabled: true
+    enabled: false
     namespace:
       create: true
       name: openshift-tempo-operator
