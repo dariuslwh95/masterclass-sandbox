@@ -48,8 +48,8 @@ spec:
       project: openshift4-community
 
       source:
-        repoURL: https://github.com/betterthanbot/openshift4.git
-        targetRevision: argocd/demo
+        repoURL: https://github.com/dariuslwh95/masterclass-sandbox.git
+        targetRevision: feat/dl-init
         path: "{{path}}"
         helm:
           valueFiles:

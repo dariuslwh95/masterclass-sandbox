@@ -28,8 +28,8 @@ spec:
 
   generators:
     - git:
-        repoURL: https://github.com/betterthanbot/openshift4.git
-        revision: argocd/demo
+        repoURL: https://github.com/dariuslwh95/masterclass-sandbox.git
+        revision: feat/dl-init
         directories:
           # Each subdirectory here becomes one ArgoCD Application.
           # Add new workloads by creating overlay/my-sno-cluster/<name>/kustomization.yaml
