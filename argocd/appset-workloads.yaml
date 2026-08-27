@@ -35,10 +35,19 @@ spec:
           # Add new workloads by creating overlay/my-sno-cluster/<name>/kustomization.yaml
           - path: overlay/my-sno-cluster/*
           # To disable a workload without deleting the folder, add it here with exclude: true
+          - path: overlay/my-sno-cluster/ctfd
+            exclude: true
           - path: overlay/my-sno-cluster/kyverno
             exclude: true
+          - path: overlay/my-sno-cluster/model-serving
+            exclude: true
+          # Leave get-a-username, gatus, and grafana enabled.
           - path: overlay/my-sno-cluster/get-a-username
-            # exclude: true
+            exclude: false
+          - path: overlay/my-sno-cluster/gatus
+            exclude: false
+          - path: overlay/my-sno-cluster/grafana
+            exclude: false
         # template:
         #   metadata:
         #     annotations:
