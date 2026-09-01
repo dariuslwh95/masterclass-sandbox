@@ -26,9 +26,9 @@ spec:
     path: argocd/
     targetRevision: feat/dl-init
   syncPolicy:
-    # automated:
-    #   prune: false      # never auto-delete argocd/ resources
-    #   selfHeal: true
+    automated:
+      prune: false      # never auto-delete argocd/ resources
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
       - ApplyOutOfSyncOnly=true
